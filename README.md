@@ -12,3 +12,6 @@ This plugin allows you to double all staff or fire all staff, Also doubling of i
     - Otherwise this folder is commonly found in `C:/Users/<YOUR NAME>/Documents/OpenRCT2/plugin` on Windows.
     - If you already had this plugin installed before, you can safely overwrite the old file.
 3. Once the file is there, it should show up ingame in the dropdown menu under the map icon.
+
+
+This project is based on [wisnia74's Typescript modding template](https://github.com/wisnia74/openrct2-typescript-mod-template) and uses [Nodemon](https://nodemon.io/), [ESLint](https://eslint.org/) and [TypeScript](https://www.typescriptlang.org/) from this template.
