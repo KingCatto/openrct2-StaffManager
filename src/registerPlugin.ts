@@ -4,7 +4,7 @@ import main from './main';
 
 registerPlugin({
   name: 'Staff Manager',
-  version: '0.0.3', // Your plugin version
+  version: '0.0.4', // Your plugin version
   authors: ['KingCatto'],
   type: 'local',
   licence: "MIT",
