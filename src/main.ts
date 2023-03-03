@@ -24,17 +24,17 @@ function showUi() {
     window.bringToFront();
   } else {
     window = ui.openWindow({
-      classification: 'Dallas Staff Manager',
+      classification: 'Staff Manager',
       width: 220,
-      height: 180,
-      title: 'Dallas Staff Manager',
+      height: 125,
+      title: 'Staff Manager',
       widgets: [
         {
           type: 'button',
           name: 'FireAllStaff',
           text: 'Fire All Staff',
           x: 2,
-          y: 160,
+          y: 106,
           width: 216,
           height: 15,
           onClick() {
@@ -50,7 +50,7 @@ function showUi() {
           tooltip:
             'Double Mechanic',
           x: 2,
-          y: 55,
+          y: 20,
           width: 106,
           height: 15,
           onClick() {
@@ -76,7 +76,7 @@ function showUi() {
           text: 'Double Entertainer',
           tooltip:
             'Double Entertainer',
-          x: 110,
+          x: 112,
           y: 55,
           width: 106,
           height: 15,
@@ -102,8 +102,8 @@ function showUi() {
           text: 'Double Security',
           tooltip:
             'Double Security does not make the park safer.',
-          x: 110,
-          y: 72,
+          x: 2,
+          y: 55,
           width: 106,
           height: 15,
           onClick() {
@@ -129,8 +129,8 @@ function showUi() {
           text: 'Double Handyman',
           tooltip:
             'Double Handyman',
-          x: 2,
-          y: 72,
+          x: 112,
+          y: 20,
           width: 106,
           height: 15,
           onClick() {
@@ -156,7 +156,7 @@ function showUi() {
           tooltip:
             'Fire all Mechanics... Good luck fixing rides',
           x: 2,
-          y: 89,
+          y: 37,
           width: 106,
           height: 15,
           onClick() {
@@ -175,8 +175,8 @@ function showUi() {
           text: 'Fire Security',
           tooltip:
             'Fire all Security Guards... Why hire them in the first place. Just make a better park.',
-          x: 110,
-          y: 89,
+          x: 2,
+          y: 72,
           width: 106,
           height: 15,
           onClick() {
@@ -195,8 +195,8 @@ function showUi() {
           text: 'Fire Handyman',
           tooltip:
             'Fire all Handymen... Nice Job now your park will be littered and smelly.',
-          x: 110,
-          y: 106,
+          x: 112,
+          y: 37,
           width: 106,
           height: 15,
           onClick() {
@@ -214,8 +214,8 @@ function showUi() {
           text: 'Fire Entertainers',
           tooltip:
             'Fire all Entertainers... Good Job park is extremely boring now',
-          x: 2,
-          y: 106,
+          x: 112,
+          y: 72,
           width: 106,
           height: 15,
           onClick() {
@@ -226,6 +226,41 @@ function showUi() {
             },
               );
             },
+        },
+        {   
+          type: 'button',
+          name: 'Double All Staff',
+          text: 'Double All Staff',
+          tooltip:
+            'Double all the staff.',
+            x: 2,
+            y: 89,
+            width: 216,
+            height: 15,
+          onClick() {
+            const staff: Staff[] = getStaff();
+
+            staff.forEach((staffMember) => {
+              let typ = 0;
+              if (staffMember.staffType === 'handyman') {
+                typ = StaffType.Handyman;
+              } else if (staffMember.staffType === 'mechanic') {
+                typ = StaffType.Mechanic;
+              } else if (staffMember.staffType === 'entertainer') {
+                typ = StaffType.Entertainer;
+              } else if (staffMember.staffType === 'security') {
+                typ = StaffType.Security;
+              }
+              context.executeAction(
+                'staffhire',
+                {
+                  autoPosition: true,
+                  staffType: typ,
+                  entertainerType: staffMember.costume,
+                  staffOrders: staffMember.orders,
+                }
+          },
+        },
         },
         ],
       onClose() {
