@@ -6,7 +6,7 @@ This plugin allows you to double all staff or fire all staff, Also doubling of i
 
 ## Installation
 
-1. Download the latest version of the plugin from the [Releases page](https://github.com/Dallas-Powers/openrct2-StaffManager/releases/tag/v0.0.3).
+1. Download the latest version of the plugin from the [Releases page](https://github.com/KingCatto/openrct2-StaffManager/releases/tag/v0.0.3).
 2. To install it, put the downloaded `*.js` file into your `/OpenRCT2/plugin` folder.
     - Easiest way to find the OpenRCT2-folder is by launching the OpenRCT2 game, click and hold on the red toolbox in the main menu, and select "Open custom content folder".
     - Otherwise this folder is commonly found in `C:/Users/<YOUR NAME>/Documents/OpenRCT2/plugin` on Windows.
