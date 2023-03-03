@@ -273,7 +273,7 @@ function showUi() {
 
 const main = (): void => {
   if (isUiAvailable) {
-    ui.registerMenuItem('Dallas Staff Manager', () => {
+    ui.registerMenuItem('Staff Manager', () => {
       showUi();
     });
   }
