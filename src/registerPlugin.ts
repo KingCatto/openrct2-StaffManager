@@ -5,7 +5,7 @@ import main from './main';
 registerPlugin({
   name: 'Staff Manager',
   version: '0.0.2', // Your plugin version
-  authors: ['Dallas Powers'],
+  authors: ['DallasP'],
   type: 'local',
   licence: "MIT",
   minApiVersion: 56,
