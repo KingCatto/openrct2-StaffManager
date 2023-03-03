@@ -26,17 +26,17 @@ function showUi() {
     window = ui.openWindow({
       classification: 'Staff Manager',
       width: 220,
-      height: 125,
+      height: 117,
       title: 'Staff Manager',
       widgets: [
         {
           type: 'button',
           name: 'FireAllStaff',
           text: 'Fire All Staff',
-          x: 2,
-          y: 106,
-          width: 216,
-          height: 15,
+          x: 112,
+          y: 88,
+          width: 106,
+          height: 25,
           onClick() {
             getStaff().forEach((staffMember) => {
               fireStaff(staffMember.id);
@@ -50,7 +50,7 @@ function showUi() {
           tooltip:
             'Double Mechanic',
           x: 2,
-          y: 20,
+          y: 37,
           width: 106,
           height: 15,
           onClick() {
@@ -76,8 +76,8 @@ function showUi() {
           text: 'Double Entertainer',
           tooltip:
             'Double Entertainer',
-          x: 112,
-          y: 55,
+          x: 2,
+          y: 71,
           width: 106,
           height: 15,
           onClick() {
@@ -103,7 +103,7 @@ function showUi() {
           tooltip:
             'Double Security does not make the park safer.',
           x: 2,
-          y: 55,
+          y: 54,
           width: 106,
           height: 15,
           onClick() {
@@ -129,7 +129,7 @@ function showUi() {
           text: 'Double Handyman',
           tooltip:
             'Double Handyman',
-          x: 112,
+          x: 2,
           y: 20,
           width: 106,
           height: 15,
@@ -155,7 +155,7 @@ function showUi() {
           text: 'Fire Mechanics',
           tooltip:
             'Fire all Mechanics... Good luck fixing rides',
-          x: 2,
+          x: 112,
           y: 37,
           width: 106,
           height: 15,
@@ -175,8 +175,8 @@ function showUi() {
           text: 'Fire Security',
           tooltip:
             'Fire all Security Guards... Why hire them in the first place. Just make a better park.',
-          x: 2,
-          y: 72,
+          x: 112,
+          y: 54,
           width: 106,
           height: 15,
           onClick() {
@@ -196,7 +196,7 @@ function showUi() {
           tooltip:
             'Fire all Handymen... Nice Job now your park will be littered and smelly.',
           x: 112,
-          y: 37,
+          y: 20,
           width: 106,
           height: 15,
           onClick() {
@@ -215,7 +215,7 @@ function showUi() {
           tooltip:
             'Fire all Entertainers... Good Job park is extremely boring now',
           x: 112,
-          y: 72,
+          y: 71,
           width: 106,
           height: 15,
           onClick() {
@@ -234,9 +234,9 @@ function showUi() {
           tooltip:
             'Double all the staff.',
             x: 2,
-            y: 89,
-            width: 216,
-            height: 15,
+            y: 88,
+            width: 106,
+            height: 25,
           onClick() {
             const staff: Staff[] = getStaff();
 
@@ -258,7 +258,7 @@ function showUi() {
                   staffType: typ,
                   entertainerType: staffMember.costume,
                   staffOrders: staffMember.orders,
-                }
+                },
           },
         },
         },
